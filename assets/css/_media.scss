@@ -1,0 +1,23 @@
+@mixin media-pc-lg {
+  @media screen and  (max-width: 1920px){
+    @content;
+  }
+}
+
+@mixin media-pc {
+    @media screen and (max-width: 1280px) {
+      @content;
+    }
+  }
+  
+@mixin media-sp {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+  
+@mixin media-is-pc {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
