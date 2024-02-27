@@ -1,24 +1,71 @@
-&&&&&&&&&&&&&&&  Dolce Q   &&&&&&&&&&&&&&&&&&&&&&&&&&&
+&&&&&&&&&&&&&&& Dolce Q &&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 2024.2.27//2:27AM created by Watsuki
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dolce-Q</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/wow.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+  <title>Dolce-Q</title>
 </head>
+
 <body>
-    <header>
+  <header>
 
-    </header>
-    <main>
-        
-    </main>
-    <footer>
+  </header>
+  <main>
+    <section class="top section_animate">
+      <div class="top__container">
+        <img src="./assets/img/fv_female.png" alt="company-intro" width="528" height="auto">
+        <img src="./assets/img/company-intro.PNG" alt="fv_female" width="528" height="auto">
+      </div>
+    </section>
+    <section class="about section_animate">
+      <div class="about__container">
+        <img src="./assets/img/product_content.png" alt="">
+      </div>
+    </section>
+    <section class="top section_animate">
+      <div class="top__container">
+        <img src="./assets/img/fv_female.png" alt="company-intro" width="528" height="auto">
+        <img src="./assets/img/company-intro.PNG" alt="fv_female" width="528" height="auto">
+      </div>
+    </section>
+    <section class="abs_bar">
+      <div class="abs_bar__space">
+        <div class="abs_bar__line"></div>
+        <div class="abs_bar__ttls">
+          <p>PAGE TOP</p>
+          <p>ABOUT</p>
+          <p>PRODUCT</p>
+          <p>NAV</p>
+        </div>
+        <div class="abs_bar__options">
+          <p class="abs_bar__options--item abs_bar__options--item__selected"></p>
+          <p class="abs_bar__options--item"></p>
+          <p class="abs_bar__options--item"></p>
+          <p class="abs_bar__options--item"></p>
+          <p class="abs_bar__options--item__animate"></p>
+        </div>
+        <div class="abs_bar__line--animate"></div>
+      </div>
+    </section>
+  </main>
+  <footer>
 
-    </footer>
+  </footer>
+  <script src="./assets/js/wow.js"></script>
+  <script src="./assets/js/custome.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 </body>
+
 </html>

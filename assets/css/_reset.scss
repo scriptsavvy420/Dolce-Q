@@ -25,7 +25,7 @@ html{
   @include media-sp {
     font-size: calc((100 / 390) * 1vw);
   }
-  
+  overflow: hidden;
 }
 
 *::selection{
