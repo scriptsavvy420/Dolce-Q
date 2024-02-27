@@ -21,6 +21,7 @@ a {
 html {
   scroll-behavior: smooth;
   font-size: 1px;
+  overflow: hidden;
 }
 @media screen and (max-width: 1920px) {
   html {
@@ -161,4 +162,80 @@ figure {
 ::-webkit-scrollbar-thumb {
   background: #1f1f1f;
   border-radius: 5px;
+}
+
+.abs_bar {
+  position: fixed;
+  left: 20px;
+  height: 600px;
+  z-index: 1;
+  width: 50px;
+  top: 30%;
+  color: #707070;
+}
+.abs_bar__space {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.abs_bar__line {
+  width: 2px;
+  height: 100%;
+  background-color: #707070;
+  z-index: 0;
+}
+.abs_bar__line--animate {
+  position: absolute;
+  width: 2px;
+  z-index: 1;
+  background: #000;
+}
+.abs_bar__ttls {
+  position: absolute;
+  height: 100%;
+  width: 150px;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.abs_bar__options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: absolute;
+  left: -8px;
+  z-index: 2;
+}
+.abs_bar__options--item {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #707070;
+  border-radius: 50px;
+  background-color: #fff;
+}
+.abs_bar__options--item__selected {
+  background-color: #707070;
+}
+.abs_bar__options--item__animate {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border: 1px solid;
+  border-radius: 50px;
+  left: -9px;
+  top: -8px;
+}
+
+.top__container, .about__container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFBEC;
+  border-bottom: 2px solid;
 }/*# sourceMappingURL=style.css.map */
