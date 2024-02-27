@@ -1,7 +1,15 @@
 @import './media';
 @import './config';
 @import './reset';
+@import "./components/top_section";
 
-
-
-
+.top, .about{
+    &__container {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #FFFBEC;
+        border-bottom: 2px solid;
+    }
+}
