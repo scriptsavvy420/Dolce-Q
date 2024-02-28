@@ -20,22 +20,28 @@ a {
 
 html {
   scroll-behavior: smooth;
-  font-size: 1px;
+  font-size: 1.2px;
 }
 @media screen and (max-width: 1920px) {
   html {
-    font-size: 0.0520833333vw;
-    overflow: hidden;
+    font-size: 0.0694444444vw;
+    overflow-y: hidden;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1440px) {
   html {
-    overflow: hidden;
+    font-size: 0.0694444444vw;
+    overflow-y: hidden;
   }
 }
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 1024px) {
   html {
-    font-size: 0.2564102564vw;
+    font-size: 0.09765625vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 0.1302083333vw;
   }
 }
 
@@ -169,10 +175,36 @@ figure {
   border-radius: 5px;
 }
 
+/**
+* @file _common.scss
+**/
+.is-pc {
+  display: block;
+}
+@media screen and (max-width: 1024px) {
+  .is-pc {
+    display: none !important;
+  }
+}
+
+.is-sp {
+  display: none !important;
+}
+@media screen and (max-width: 1024px) {
+  .is-sp {
+    display: block !important;
+  }
+}
+
+.l-common {
+  max-width: 968px;
+  margin: 0 auto;
+}
+
 .abs_bar {
   position: fixed;
-  left: 150rem;
-  height: 600rem;
+  left: 100rem;
+  height: 600px;
   z-index: 1;
   width: 50px;
   top: 30%;
@@ -212,7 +244,7 @@ figure {
   justify-content: space-between;
   height: 100%;
   position: absolute;
-  left: -5rem;
+  left: -5px;
   z-index: 2;
 }
 .abs_bar__options--item {
@@ -232,11 +264,11 @@ figure {
   height: 25px;
   border: 1px solid;
   border-radius: 50px;
-  left: -7rem;
+  left: -7px;
   top: -8px;
 }
 
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 1024px) {
   .abs_bar {
     display: none;
   }
@@ -260,24 +292,38 @@ figure {
   padding-top: 40rem;
   position: relative;
 }
+@media screen and (max-width: 1024px) {
+  .top__container {
+    padding-top: 20rem;
+  }
+}
 .top__container--head {
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding-left: 150rem;
-  padding-right: 0;
+  padding-bottom: 20rem;
 }
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 1440px) {
   .top__container--head {
-    padding-left: 110rem;
-    padding-right: 0;
+    padding-left: 100rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .top__container--head {
+    padding-left: 80rem;
   }
 }
 .top__container--head_logo {
   width: 300px;
   height: 90px;
+}
+@media screen and (max-width: 1024px) {
+  .top__container--head_logo {
+    display: none;
+  }
 }
 .top__container--head_menu {
   width: 150px;
@@ -285,17 +331,34 @@ figure {
   border-radius: 50px 0px 0px 50px;
   background-color: #F8EEEE;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 1440px) {
+  .top__container--head_menu {
+    width: 120rem;
+    height: 60rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .top__container--head_menu {
+    display: none;
+  }
 }
 .top__container--head_menu-ttl {
   color: #726D5F;
   font-size: 30rem;
   font-family: "Noto Sans JP", sans-serif;
 }
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 1024px) {
   .top__container--head_menu-ttl {
-    font-size: 22rem;
+    font-size: 10rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .top__container--head_menu-ttl {
+    font-size: 6rem;
   }
 }
 .top__container--content {
@@ -303,43 +366,57 @@ figure {
   flex-direction: row;
   justify-content: center;
   align-items: baseline;
-  gap: 50rem;
+  padding-bottom: 20rem;
 }
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 1024px) {
   .top__container--content {
-    flex-direction: column;
-    flex-flow: column-reverse;
     padding-top: 20rem;
   }
 }
 .top__container--content_female {
-  width: 528px;
-  height: 620px;
+  width: 350rem;
+  height: 430rem;
+  z-index: 9999;
+}
+@media screen and (max-width: 1024px) {
+  .top__container--content_female {
+    width: 400rem;
+    height: 550rem;
+  }
 }
 .top__container--content_compintro {
-  width: 600px;
-  height: 590px;
+  height: 400rem;
+  z-index: 9998;
+}
+@media screen and (max-width: 1024px) {
+  .top__container--content_compintro {
+    display: none;
+  }
 }
 .top__container--last {
-  padding-top: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .top__container--last_logo {
-  width: 590px;
-  height: 176px;
+  width: 590rem;
+  height: 176rem;
+  z-index: 9999;
 }
 .top__container--deco {
   position: absolute;
   right: 0;
-  top: 160rem;
-  width: 400px;
-  height: 900px;
-  z-index: 9999;
+  top: 10rem;
+  width: 350rem;
+  z-index: 1;
 }
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 1024px) {
+  .top__container--deco {
+    top: -30rem;
+  }
+}
+@media screen and (max-width: 768px) {
   .top__container--deco {
     display: none;
   }

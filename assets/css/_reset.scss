@@ -18,16 +18,21 @@ a{
 
 html{
   scroll-behavior: smooth;
-  font-size: 1px;
+  font-size: calc(1920/1600*1px);
   @include media-pc-lg {
-    font-size: calc((100 / 1920) * 1vw);
-    overflow: hidden;
+    font-size: calc((100 / 1440) * 1vw);
+    overflow-y: hidden;
   }
   @include media-pc {
-    overflow: hidden;
+    font-size: calc((100 / 1440) * 1vw);
+    overflow-y: hidden;
   }
   @include media-sp {
-    font-size: calc((100 / 390) * 1vw);
+    font-size: calc((100 / 1024) * 1vw);
+    
+  }
+  @include media-sm {
+    font-size: calc((100 / 768) * 1vw);
     
   }
   
