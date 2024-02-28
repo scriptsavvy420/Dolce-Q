@@ -2,14 +2,121 @@
 @import './config';
 @import './reset';
 @import "./components/top_section";
+@import "./components/shadow";
 
-.top, .about{
-    &__container {
-        height: 100vh;
+.top {
+  &__container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-bottom: 2px solid;
+    padding-top: 40rem;
+    position: relative;
+
+    &--head {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 150rem;
+      padding-right: 0;
+
+      @include media-sp {
+        padding-left: 110rem;
+        padding-right: 0;
+      }
+
+      &_logo {
+        width: 300px;
+        height: 90px;
+      }
+
+      &_menu {
+        width: 150px;
+        height: 80px;
+        border-radius: 50px 0px 0px 50px;
+        background-color: #F8EEEE;
         display: flex;
-        align-items: center;
         justify-content: center;
-        background-color: #FFFBEC;
-        border-bottom: 2px solid;
+        align-items: center;
+
+
+        &-ttl {
+          color: #726D5F;
+          font-size: 30rem;
+          font-family: $font-noto;
+
+          @include media-sp {
+            font-size: 22rem;
+          }
+        }
+      }
+
     }
+
+    &--content {
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: baseline;
+      gap: 50rem;
+
+      @include media-sp {
+        flex-direction: column;
+        flex-flow: column-reverse;
+        padding-top: 20rem;
+      }
+
+      &_female {
+        width: 528px;
+        height: 620px;
+      }
+
+      &_compintro {
+        width: 600px;
+        height: 590px;
+      }
+    }
+
+    &--last {
+      padding-top: 10rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &_logo {
+        width: 590px;
+        height: 176px;
+      }
+    }
+
+    &--deco {
+      position: absolute;
+      right: 0;
+      top: 160rem;
+      width: 400px;
+      height: 900px;
+      z-index: 9999;
+
+      @include media-sp {
+        display: none;
+      }
+    }
+  }
+}
+
+.about {
+  &__container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-bottom: 2px solid;
+  }
 }
