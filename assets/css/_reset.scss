@@ -21,11 +21,16 @@ html{
   font-size: 1px;
   @include media-pc-lg {
     font-size: calc((100 / 1920) * 1vw);
+    overflow: hidden;
+  }
+  @include media-pc {
+    overflow: hidden;
   }
   @include media-sp {
     font-size: calc((100 / 390) * 1vw);
+    
   }
-  overflow: hidden;
+  
 }
 
 *::selection{
