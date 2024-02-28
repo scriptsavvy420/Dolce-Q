@@ -62,7 +62,7 @@ window.addEventListener("wheel", debouncedHandleMouseWheel);
 
 /* Circle Move Part */
 const moveCircle = (direction) => {
-  const moveAmount = 193;
+  const moveAmount = 197;
   const moveValue = direction == 1 ? moveAmount : -moveAmount;
   console.log("direction, moveValue", direction, moveValue);
   gsap.to(item_animate, {
