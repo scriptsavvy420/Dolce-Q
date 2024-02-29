@@ -20,4 +20,57 @@
     max-width: 968px;
     margin: 0 auto;   
 }
+.menu-btn {
+    display: block;
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E2CE8F;
+    width: 300rem;
+    height: 70rem;
+    text-align: center;
+    color: #72716f;
+    font-size: 20rem;
+    font-family: $font-noto;
+    font-weight: normal;
+    border-radius: 30rem;
+    
+    &:hover {
+        opacity: 0.7;
+        background-color: #ceba91;
+        color: white;
+    }
+ 
+}
+.shopping-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E2CE8F;
+    width: 200rem;
+    height: 70rem;
+    padding: 30rem;
+    border-radius: 30rem;
+    
+    &:hover {
+        opacity: 0.7;
+        background-color: #ceba91;
+        color: white;
+    }
+ 
+}
+
+.link-shop {
+    width:fit-content;
+}
+.sobtn {
+    width: 50rem;
+    height: 50rem;
+}
 
