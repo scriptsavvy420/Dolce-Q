@@ -15,6 +15,7 @@
     border-bottom: 2px solid;
     padding-top: 40rem;
     position: relative;
+
     @include media-sp {
       padding-top: 20rem;
     }
@@ -27,6 +28,7 @@
       align-items: center;
       padding-left: 150rem;
       padding-bottom: 20rem;
+
       @include media-pc {
         padding-left: 100rem;
       }
@@ -38,44 +40,20 @@
       &_logo {
         width: 300px;
         height: 90px;
+
         @include media-sp {
           display: none;
         }
       }
 
       &_menu {
-        width: 150px;
-        height: 80px;
-        border-radius: 50px 0px 0px 50px;
-        background-color: #F8EEEE;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        @include media-pc {
-          width: 120rem;
-          height: 60rem;
+        padding-right: 60rem;
+        z-index: 9999;
 
-        }
-        @include media-sp {
-          display: none;
-        }
-        
-        &-ttl {
-          color: #726D5F;
-          font-size: 30rem;
-          font-family: $font-noto;
-          
-  
-          @include media-sp {
-            font-size: 10rem;
-          }
-  
-          @include media-sm {
-            font-size: 6rem;
-          }
-
-        }
       }
 
     }
@@ -96,6 +74,7 @@
         width: 350rem;
         height: 430rem;
         z-index: 9999;
+
         @include media-sp {
           width: 400rem;
           height: 550rem;
@@ -103,8 +82,9 @@
       }
 
       &_compintro {
-       height: 400rem;
+        height: 400rem;
         z-index: 9998;
+
         @include media-sp {
           display: none;
         }
@@ -122,7 +102,7 @@
         height: 176rem;
         z-index: 9999;
       }
-     
+
     }
 
     &--deco {
@@ -131,13 +111,14 @@
       top: 10rem;
       width: 350rem;
       z-index: 1;
+
       @include media-sp {
         top: -30rem;
       }
+
       @include media-sm {
         display: none;
       }
-      
     }
   }
 }
@@ -146,9 +127,192 @@
   &__container {
     height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     background-color: white;
     border-bottom: 2px solid;
+    position: relative;
+
+    &--deco {
+      position: absolute;
+      width: 440rem;
+      right: 0;
+      top: 0;
+      z-index: 9999;
+    }
+
+    &--ttl {
+      font-size: 60rem;
+      font-weight: bold;
+      color: #434038;
+      padding-left: 100rem;
+      padding-top: 80px;
+      font-family: "UD Digi Kyokasho N-B";
+
+    }
+
+    &--content {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-end;
+      padding-top: 30rem;
+      gap: 40rem;
+
+
+      &_dscrt {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../img/about_towel.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &-mark {
+          width: 450rem;
+          height: 200rem;
+        }
+
+        &-ttl {
+          padding-top: 60rem;
+          font-size: 24rem;
+          font-family: $font-noto;
+          color: #726D5F;
+          padding-bottom: 30rem;
+
+        }
+
+      }
+
+      &_advtg {
+        width: 450rem;
+        height: 450rem;
+        padding-left: 100rem;
+        border-radius: 50px;
+        overflow: hidden;
+
+        @include media-sm {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.product {
+  &__container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-bottom: 2px solid;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../img/ph_49978.jpg");
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &--deco {
+      position: absolute;
+      width: 850rem;
+      right: 0;
+      top: 0;
+      z-index: 9999;
+    }
+
+    &--ttl {
+      font-size: 60rem;
+      font-weight: bold;
+      color: #434038;
+      padding-left: 100rem;
+      padding-top: 80px;
+      font-family: "UD Digi Kyokasho N-B";
+    }
+
+    &--content {
+      position: absolute;
+      bottom: 10rem;
+      right: 120rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 40rem;
+
+      &_ttl {
+        font-size: 80rem;
+        font-family: $font-noto;
+        font-weight: bold;
+        letter-spacing: 0.2em;
+      }
+
+      &_subttl {
+        font-size: 24rem;
+        font-family: $font-noto;
+        font-weight: normal;
+        color: #726D5F;
+        line-height: 150%;
+        flex-wrap: auto;
+      }
+
+    }
+
+  }
+}
+
+.nav {
+  &__container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-bottom: 2px solid;
+    position: relative;
+
+    &--menu {
+      position: absolute;
+      top: 80px;
+      right: 60rem;
+      width: 55rem;
+      height: 55rem;
+    }
+
+    &--ttl {
+      font-size: 60rem;
+      font-weight: bold;
+      color: #434038;
+      padding-left: 100rem;
+      padding-top: 80px;
+      font-family: "UD Digi Kyokasho N-B";
+    }
+
+    &--content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &_logo {
+        margin-top: 60rem;
+        margin-bottom: 20rem;
+      }
+
+      &_shopping {
+        padding-top: 30rem;
+        display: grid;
+        grid-template:
+          "a  b"
+          "c  d";
+        gap: 40rem;
+      }
+
+      &_social {
+        padding-top: 30rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+    }
   }
 }

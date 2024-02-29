@@ -201,12 +201,65 @@ figure {
   margin: 0 auto;
 }
 
+.menu-btn {
+  display: block;
+}
+.menu-btn:hover {
+  opacity: 0.7;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E2CE8F;
+  width: 300rem;
+  height: 70rem;
+  text-align: center;
+  color: #72716f;
+  font-size: 20rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: normal;
+  border-radius: 30rem;
+}
+.btn:hover {
+  opacity: 0.7;
+  background-color: #ceba91;
+  color: white;
+}
+
+.shopping-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E2CE8F;
+  width: 200rem;
+  height: 70rem;
+  padding: 30rem;
+  border-radius: 30rem;
+}
+.shopping-btn:hover {
+  opacity: 0.7;
+  background-color: #ceba91;
+  color: white;
+}
+
+.link-shop {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.sobtn {
+  width: 50rem;
+  height: 50rem;
+}
+
 .abs_bar {
   position: fixed;
   left: 100rem;
   height: 600px;
   z-index: 1;
-  width: 50px;
+  width: 30rem;
   top: 30%;
   color: #707070;
 }
@@ -231,8 +284,8 @@ figure {
 .abs_bar__ttls {
   position: absolute;
   height: 100%;
-  width: 150px;
-  font-size: 24px;
+  width: 100rem;
+  font-size: 16rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -250,7 +303,7 @@ figure {
 .abs_bar__options--item {
   position: relative;
   width: 10px;
-  height: 10px;
+  height: 10rem;
   border: 1px solid #707070;
   border-radius: 50px;
   background-color: #fff;
@@ -260,8 +313,8 @@ figure {
 }
 .abs_bar__options--item__animate {
   position: absolute;
-  width: 25px;
-  height: 25px;
+  width: 20rem;
+  height: 20rem;
   border: 1px solid;
   border-radius: 50px;
   left: -7px;
@@ -326,40 +379,12 @@ figure {
   }
 }
 .top__container--head_menu {
-  width: 150px;
-  height: 80px;
-  border-radius: 50px 0px 0px 50px;
-  background-color: #F8EEEE;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-@media screen and (max-width: 1440px) {
-  .top__container--head_menu {
-    width: 120rem;
-    height: 60rem;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .top__container--head_menu {
-    display: none;
-  }
-}
-.top__container--head_menu-ttl {
-  color: #726D5F;
-  font-size: 30rem;
-  font-family: "Noto Sans JP", sans-serif;
-}
-@media screen and (max-width: 1024px) {
-  .top__container--head_menu-ttl {
-    font-size: 10rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  .top__container--head_menu-ttl {
-    font-size: 6rem;
-  }
+  padding-right: 60rem;
+  z-index: 9999;
 }
 .top__container--content {
   display: flex;
@@ -425,8 +450,162 @@ figure {
 .about__container {
   height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   background-color: white;
   border-bottom: 2px solid;
+  position: relative;
+}
+.about__container--deco {
+  position: absolute;
+  width: 440rem;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+}
+.about__container--ttl {
+  font-size: 60rem;
+  font-weight: bold;
+  color: #434038;
+  padding-left: 100rem;
+  padding-top: 80px;
+  font-family: "UD Digi Kyokasho N-B";
+}
+.about__container--content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  padding-top: 30rem;
+  gap: 40rem;
+}
+.about__container--content_dscrt {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../img/about_towel.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.about__container--content_dscrt-mark {
+  width: 450rem;
+  height: 200rem;
+}
+.about__container--content_dscrt-ttl {
+  padding-top: 60rem;
+  font-size: 24rem;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #726D5F;
+  padding-bottom: 30rem;
+}
+.about__container--content_advtg {
+  width: 450rem;
+  height: 450rem;
+  padding-left: 100rem;
+  border-radius: 50px;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .about__container--content_advtg {
+    display: none;
+  }
+}
+
+.product__container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-bottom: 2px solid;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../img/ph_49978.jpg");
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.product__container--deco {
+  position: absolute;
+  width: 850rem;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+}
+.product__container--ttl {
+  font-size: 60rem;
+  font-weight: bold;
+  color: #434038;
+  padding-left: 100rem;
+  padding-top: 80px;
+  font-family: "UD Digi Kyokasho N-B";
+}
+.product__container--content {
+  position: absolute;
+  bottom: 10rem;
+  right: 120rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 40rem;
+}
+.product__container--content_ttl {
+  font-size: 80rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+.product__container--content_subttl {
+  font-size: 24rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: normal;
+  color: #726D5F;
+  line-height: 150%;
+  flex-wrap: auto;
+}
+
+.nav__container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-bottom: 2px solid;
+  position: relative;
+}
+.nav__container--menu {
+  position: absolute;
+  top: 80px;
+  right: 60rem;
+  width: 55rem;
+  height: 55rem;
+}
+.nav__container--ttl {
+  font-size: 60rem;
+  font-weight: bold;
+  color: #434038;
+  padding-left: 100rem;
+  padding-top: 80px;
+  font-family: "UD Digi Kyokasho N-B";
+}
+.nav__container--content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nav__container--content_logo {
+  margin-top: 60rem;
+  margin-bottom: 20rem;
+}
+.nav__container--content_shopping {
+  padding-top: 30rem;
+  display: grid;
+  grid-template: "a  b" "c  d";
+  gap: 40rem;
+}
+.nav__container--content_social {
+  padding-top: 30rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
